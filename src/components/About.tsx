@@ -215,7 +215,7 @@ const Summary = () => {
 
         <p
           ref={textRef}
-          className="text-lg text-[#F5F5F5] mb-12 max-w-3xl leading-relaxed"
+          className="text-lg text-[#F5F5F5] mb-12 w-full leading-relaxed"
         >
           Software Engineer focused on building web applications with an
           end-to-end perspective. By connecting technical logic with user
