@@ -8,9 +8,9 @@
   --color-primary-light: #214f5f;
   --color-primary-dark: #0c0f1e;
 
-  /* Accent colors - Warm tones */
-  --color-accent: #e2773a;
-  --color-accent-light: #ffcb68;
+  /* Accent colors - Warm tones (toned down) */
+  --color-accent: #d66b2e;
+  --color-accent-light: #f5c05a;
   --color-accent-warm: #6b504c;
 
   /* Background colors */
@@ -22,7 +22,7 @@
   --color-text-primary: #ffffff;
   --color-text-secondary: #cccccc;
   --color-text-tertiary: #999999;
-  --color-text-accent: #e2773a;
+  --color-text-accent: #d66b2e;
 
   /* Legacy colors (for backward compatibility) */
   --color-dark: #0c0f1e;
@@ -42,8 +42,8 @@ body {
     #0c0f1e 0%,
     #143041 30%,
     #214f5f 60%,
-    #e2773a 85%,
-    #ffcb68 100%
+    #d66b2e 85%,
+    #f5c05a 100%
   );
   background-attachment: fixed;
   color: white;
@@ -67,8 +67,8 @@ html {
       #0c0f1e 0%,
       #143041 30%,
       #214f5f 60%,
-      #e2773a 85%,
-      #ffcb68 100%
+      #d66b2e 85%,
+      #f5c05a 100%
     );
   background-size: 20px 20px, 100% 100%;
   background-attachment: fixed;

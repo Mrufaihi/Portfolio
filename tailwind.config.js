@@ -14,10 +14,10 @@ export default {
           dark: '#0C0F1E',          // Dark navy - background base
         },
 
-        // Accent colors - Warm tones
+        // Accent colors - Warm tones (toned down)
         accent: {
-          DEFAULT: '#E2773A',      // Vibrant orange - CTAs, links, highlights
-          light: '#FFCB68',         // Golden yellow - active states, highlights
+          DEFAULT: '#D66B2E',      // Orange - CTAs, links, highlights
+          light: '#F5C05A',         // Golden yellow - active states, highlights
           warm: '#6B504C',          // Earthy brown - neutral accent, borders
         },
 
@@ -52,7 +52,7 @@ export default {
         sans: ['Rubik', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
-        'gradient-discogame': 'linear-gradient(135deg, #0C0F1E 0%, #143041 30%, #214F5F 60%, #E2773A 85%, #FFCB68 100%)',
+        'gradient-discogame': 'linear-gradient(135deg, #0C0F1E 0%, #143041 30%, #214F5F 60%, #D66B2E 85%, #F5C05A 100%)',
         'gradient-radial': 'radial-gradient(ellipse at top left, #0C0F1E 0%, #143041 40%, #214F5F 80%, #E2773A 100%)',
         'gradient-full': 'linear-gradient(135deg, #0C0F1E 0%, #143041 25%, #214F5F 50%, #6B504C 75%, #E2773A 100%)',
       },

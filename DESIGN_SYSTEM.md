@@ -10,13 +10,13 @@
 
 ### Accent Colors (Warm Tones)
 
-- `accent` / `accent-DEFAULT`: `#E2773A` - Vibrant orange (CTAs, links, highlights)
-- `accent-light`: `#FFCB68` - Golden yellow (active states, highlights)
+- `accent` / `accent-DEFAULT`: `#D66B2E` - Orange (CTAs, links, highlights)
+- `accent-light`: `#F5C05A` - Golden yellow (active states, highlights)
 - `accent-warm`: `#6B504C` - Earthy brown (neutral accent, borders)
 
 ### Background Gradient
 
-- Gradient: `linear-gradient(135deg, #0C0F1E 0%, #143041 30%, #214F5F 60%, #E2773A 85%, #FFCB68 100%)`
+- Gradient: `linear-gradient(135deg, #0C0F1E 0%, #143041 30%, #214F5F 60%, #D66B2E 85%, #F5C05A 100%)`
 - Applied to body with `background-attachment: fixed`
 
 ### Text Colors
@@ -25,14 +25,19 @@
 - Body text: `#F5F5F5` (slight off-white)
 - Secondary text: `#E8E8E8` (light grey)
 - Tertiary text: `#D0D0D0` (medium grey)
-- Accent text: `#E2773A` (orange)
+- Accent text: `#D66B2E` (orange)
+
+### Layout
+
+- Section padding: `px-6 md:px-12 lg:px-20` (responsive horizontal margins)
+- Glass effect: `bg-white/5 border border-white/10 backdrop-blur-sm` (for badges, sidebar)
 
 ### Surface Colors (Cards, Sections)
 
 - Card background: `rgba(20, 48, 65, 0.6)` - Semi-transparent teal
 - Card hover: `rgba(33, 79, 95, 0.8)` - Lighter on hover
-- Border: `rgba(226, 119, 58, 0.3)` - Orange border
-- Border hover: `rgba(226, 119, 58, 0.6)` - Brighter on hover
+- Border: `rgba(214, 107, 46, 0.3)` - Orange border
+- Border hover: `rgba(214, 107, 46, 0.6)` - Brighter on hover
 
 ## Typography
 
@@ -68,6 +73,9 @@
 
 // Cards
 <div className="bg-primary border border-white/10">Card</div>
+
+// Glass effect badge
+<div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-lg">Badge</div>
 
 // Headings
 <h1 className="text-white">Title</h1>

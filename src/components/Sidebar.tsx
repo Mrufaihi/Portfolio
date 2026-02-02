@@ -7,33 +7,30 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="fixed left-8 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
-      <nav className="flex flex-col gap-6">
+    // todo we might want it on the left side
+    <aside className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 hidden lg:block">
+      <nav className="flex flex-row gap-8 bg-white/5 border border-white/10 rounded-lg px-6 py-4 backdrop-blur-sm">
         <button
-          onClick={() => scrollToSection('about')}
+          onClick={() => scrollToSection('summary')}
           className="text-[#D0D0D0] hover:text-accent transition-colors text-sm font-medium"
-          style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
         >
-          About
+          Summary
         </button>
         <button
           onClick={() => scrollToSection('projects')}
           className="text-[#D0D0D0] hover:text-accent transition-colors text-sm font-medium"
-          style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
         >
           Projects
         </button>
         <button
           onClick={() => scrollToSection('experience')}
           className="text-[#D0D0D0] hover:text-accent transition-colors text-sm font-medium"
-          style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
         >
           Exp.
         </button>
         <button
           onClick={() => scrollToSection('contact')}
           className="text-[#D0D0D0] hover:text-accent transition-colors text-sm font-medium"
-          style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
         >
           Contact
         </button>
