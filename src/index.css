@@ -3,9 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #00ff88;
-  --color-dark: #0a0a0a;
-  --color-dark-gray: #1a1a1a;
+  /* Primary palette - Teal blues */
+  --color-primary: #143041;
+  --color-primary-light: #214f5f;
+  --color-primary-dark: #0c0f1e;
+
+  /* Accent colors - Warm tones */
+  --color-accent: #e2773a;
+  --color-accent-light: #ffcb68;
+  --color-accent-warm: #6b504c;
+
+  /* Background colors */
+  --color-bg-base: #0c0f1e;
+  --color-bg-primary: #143041;
+  --color-bg-secondary: #214f5f;
+
+  /* Text colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cccccc;
+  --color-text-tertiary: #999999;
+  --color-text-accent: #e2773a;
+
+  /* Legacy colors (for backward compatibility) */
+  --color-dark: #0c0f1e;
+  --color-dark-gray: #143041;
 }
 
 * {
@@ -15,22 +36,40 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background-color: var(--color-dark);
+  font-family: 'Rubik', system-ui, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #0c0f1e 0%,
+    #143041 30%,
+    #214f5f 60%,
+    #e2773a 85%,
+    #ffcb68 100%
+  );
+  background-attachment: fixed;
   color: white;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Dotted background pattern */
+/* Dotted background pattern - overlay on gradient */
 .dotted-bg {
   background-image: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.1) 1px,
-    transparent 1px
-  );
-  background-size: 20px 20px;
+      circle,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      135deg,
+      #0c0f1e 0%,
+      #143041 30%,
+      #214f5f 60%,
+      #e2773a 85%,
+      #ffcb68 100%
+    );
+  background-size: 20px 20px, 100% 100%;
+  background-attachment: fixed;
 }

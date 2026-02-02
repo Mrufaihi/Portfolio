@@ -80,7 +80,7 @@ const experience = [
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark text-white">
+    <div className="min-h-screen text-white">
       <Navbar />
       <Sidebar />
       <main>

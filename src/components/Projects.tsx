@@ -1,9 +1,3 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
 interface Project {
   title: string;
   image: string;
@@ -18,68 +12,18 @@ interface ProjectsProps {
 }
 
 const Projects = ({ projects }: ProjectsProps) => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (sectionRef.current && titleRef.current) {
-      gsap.from(titleRef.current, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-        },
-      });
-
-      gsap.from('.project-card', {
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: 'top 80%',
-        },
-      });
-    }
-  }, []);
-
-  const handleCardHover = (e: React.MouseEvent<HTMLDivElement>) => {
-    gsap.to(e.currentTarget, {
-      scale: 1.02,
-      duration: 0.3,
-      ease: 'power2.out',
-    });
-  };
-
-  const handleCardLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    gsap.to(e.currentTarget, {
-      scale: 1,
-      duration: 0.3,
-      ease: 'power2.out',
-    });
-  };
-
   return (
-    <section id="projects" ref={sectionRef} className="py-20 px-6 bg-dark">
+    <section id="projects" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 ref={titleRef} className="text-4xl md:text-5xl font-bold mb-12">
-          Projects<span className="text-primary">.</span>
+        <h2 className="text-4xl md:text-5xl font-bold mb-12">
+          Projects<span className="text-accent">.</span>
         </h2>
 
-        <div
-          ref={cardsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card bg-dark-gray border border-white/10 rounded-lg overflow-hidden hover:border-primary/50 transition-all cursor-pointer"
-              onMouseEnter={handleCardHover}
-              onMouseLeave={handleCardLeave}
+              className="bg-primary border border-white/10 rounded-lg overflow-hidden hover:border-accent/50 transition-all cursor-pointer"
             >
               <div className="aspect-video bg-white/5 overflow-hidden">
                 <img
@@ -94,8 +38,8 @@ const Projects = ({ projects }: ProjectsProps) => {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-primary text-sm mb-4">{project.tech}</p>
-                <p className="text-white/70 mb-6 leading-relaxed">
+                <p className="text-accent text-sm mb-4">{project.tech}</p>
+                <p className="text-[#E8E8E8] mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -104,7 +48,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                     href={project.live || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline text-sm font-medium"
+                    className="text-accent hover:underline text-sm font-medium"
                   >
                     Learn more →
                   </a>
@@ -114,7 +58,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white/60 hover:text-primary transition-colors"
+                        className="text-[#D0D0D0] hover:text-accent transition-colors"
                       >
                         <svg
                           className="w-5 h-5"
@@ -130,7 +74,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white/60 hover:text-primary transition-colors"
+                        className="text-[#D0D0D0] hover:text-accent transition-colors"
                       >
                         <svg
                           className="w-5 h-5"
