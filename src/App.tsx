@@ -12,7 +12,7 @@ const devProjects = [
   {
     title: 'Finpal',
     image: '/images/projects/finpal.png',
-    tech: 'AI Development - LLMs - Data Extraction',
+    tech: 'Svelte - AI Development - Data Extraction - REST API',
     description:
       'Top 20 AI project of the year at UJ AIIT Conference. Automatically extracts data from receipts and provides an AI assistant that understands your spending patterns.',
     github: 'https://github.com/Finpal-Org/finpal-2',
@@ -20,7 +20,7 @@ const devProjects = [
   {
     title: 'Jawliner Saudi',
     image: '/images/projects/Jawliner-saudi.png',
-    tech: 'Salla Partner - Custom Theme Development',
+    tech: 'JavaScript - Salla Partner - Theme Development',
     description:
       'Fully custom theme integrated with Salla services for Salla client (Jawliner Saudi).',
     github: 'https://github.com/Mrufaihi/Jawliner',
@@ -29,16 +29,24 @@ const devProjects = [
   {
     title: 'Mayar',
     image: '/images/projects/Mayar.png',
-    tech: 'Finance Analysis - Web Application',
+    tech: 'React - Finance Analysis - Web Application',
     description:
       'Credit Analysis Banking System with UX/UI design and functional implementation.',
     github: 'https://github.com/Mrufaihi/Capstone-4-Finanace-Analysis',
     isPrivate: true,
   },
   {
+    title: 'Little Lemon (From Meta)',
+    image: '/images/projects/little-lemon.png',
+    tech: 'React - API Integration',
+    description:
+      "A modern, responsive web application for Little Lemon Restaurant featuring online table reservations and ordering capabilities. This is the capstone project for Meta's Front-End Developer Professional Certificate on Coursera.",
+    github: 'https://github.com/Mrufaihi/meta-final-capstone',
+  },
+  {
     title: 'Find My Service',
     image: '/images/projects/find-my-service.png',
-    tech: 'AI-Powered Service Finder',
+    tech: 'Svelte - AI-Powered Service Finder',
     description:
       'A modern web application that helps users find service providers near them using AI-powered search.',
     github: 'https://github.com/Mrufaihi/Find-My-Service-Project',
