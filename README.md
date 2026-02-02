@@ -54,8 +54,14 @@ npm run build
 - **Experience**: Update `experience` array in `src/App.tsx`
 - **Fonts**: Change font in `index.html` and `tailwind.config.js`
 
+## Documentation
+
+- **[PROJECT_DOCUMENTATION.md](./PROJECT_DOCUMENTATION.md)** - Complete project documentation, requirements, implementation details, and issues faced
+- **[DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md)** - Design system, color palette, and styling decisions (includes known color issues to discuss)
+
 ## Notes
 
 - Add project images to `/public/images/` folder
 - Update social links in Navbar and Contact components
 - Modify email in Contact component
+- **See DESIGN_SYSTEM.md for color issues and design decisions**
