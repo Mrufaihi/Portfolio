@@ -27,28 +27,28 @@ const Hero = () => {
       tl.fromTo(
         h1Ref.current,
         { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8 }
+        { opacity: 1, y: 0, duration: 0.8 },
       )
         .fromTo(
           h2Ref.current,
           { opacity: 0, y: 20 },
           { opacity: 1, y: 0, duration: 0.6 },
-          '-=0.4'
+          '-=0.4',
         )
         .fromTo(
           pRef.current,
           { opacity: 0, y: 20 },
           { opacity: 1, y: 0, duration: 0.6 },
-          '-=0.3'
+          '-=0.3',
         )
         .fromTo(
           buttonRef.current,
           { opacity: 0, y: 15 },
           { opacity: 1, y: 0, duration: 0.5 },
-          '-=0.3'
+          '-=0.3',
         );
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   const scrollToContact = () => {
@@ -59,47 +59,55 @@ const Hero = () => {
   };
 
   return (
-    // old regular radient bg
-    // <section className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-20 pt-20 dotted-bg">
-    //   <div className="max-w-4xl mx-auto text-center">
-
-    <section
-      className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-20 pt-20 relative"
-      style={{
-        backgroundImage: 'url(/images/disco_bg.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
-
+    <section className="min-h-screen flex items-center px-6 md:px-12 lg:px-20 pt-20">
       <div
         ref={containerRef}
-        className="max-w-4xl mx-auto text-center relative z-10"
+        className="w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-stretch"
       >
-        <h1 ref={h1Ref} className="text-6xl md:text-8xl font-bold mb-6">
-          I'm <span className="text-accent">Mohammed Alrufaihi</span>
-        </h1>
-        <h2 ref={h2Ref} className="text-3xl md:text-5xl font-semibold mb-8">
-          <span className="text-accent-light">Software Engineer</span>.
-        </h2>
-        {/* todo enhance tone minimal but professional. */}
-        <p
-          ref={pRef}
-          className="text-lg md:text-xl text-[#F5F5F5] mb-12 max-w-2xl mx-auto leading-relaxed"
-        >
-          Focused on building web applications with a strong Backend & Design
-          foundation.
-        </p>
-        <button
-          ref={buttonRef}
-          onClick={scrollToContact}
-          className="px-8 py-4 bg-accent text-white font-semibold text-lg rounded hover:bg-accent/90 transition-[colors,transform] duration-200 hover:scale-105"
-        >
-          Contact Me
-        </button>
+        {/* Left Column - Image with background */}
+        <div className="relative w-full md:w-auto flex justify-center md:justify-start items-center">
+          <div
+            className="relative w-1/2 md:w-full max-w-md md:max-w-lg max-h-[600px] aspect-[3/4] rounded-lg overflow-hidden"
+            style={{
+              backgroundImage: 'url(/images/poster-bg.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          >
+            <div className="w-full h-full">
+              <img
+                src="/images/mohammed-alrufaihi-transparant2.png"
+                alt="Mohammed Alrufaihi"
+                className="w-full h-full object-cover object-top rounded scale-125"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column - Content */}
+        <div className="text-center flex flex-col justify-center">
+          <h1 ref={h1Ref} className="text-5xl md:text-7xl font-bold mb-4">
+            I'm <span className="text-accent">Mohammed Alrufaihi</span>
+          </h1>
+          <h2 ref={h2Ref} className="text-2xl md:text-4xl font-semibold mb-6 ">
+            <span className="text-accent-light">Software Engineer</span>.
+          </h2>
+          <p
+            ref={pRef}
+            className="text-lg md:text-xl text-[#F5F5F5] mb-8 leading-relaxed"
+          >
+            Focused on building web applications with a strong Backend & Design
+            foundation.
+          </p>
+          <button
+            ref={buttonRef}
+            onClick={scrollToContact}
+            className="px-8 py-4 bg-accent text-white font-semibold text-lg rounded hover:bg-accent/90 transition-[colors,transform] duration-200 hover:scale-105 self-center md:self-center mx-auto md:mx-0 "
+          >
+            Contact Me
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import Summary from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import PeriodicIconAnimation from './components/PeriodicIconAnimation';
 
 // Development Projects
 const devProjects = [
@@ -161,6 +162,7 @@ function App() {
         <Experience experience={experience} />
         <Contact />
       </main>
+      <PeriodicIconAnimation />
     </div>
   );
 }
