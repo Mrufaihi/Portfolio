@@ -4,6 +4,7 @@ import gsap from 'gsap';
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
   const h1Ref = useRef<HTMLHeadingElement>(null);
   const h2Ref = useRef<HTMLHeadingElement>(null);
   const pRef = useRef<HTMLParagraphElement>(null);
@@ -24,11 +25,18 @@ const Hero = () => {
       });
 
       // Use fromTo to ensure elements are visible by default
+      // Animate image first (fade in + scale up)
       tl.fromTo(
-        h1Ref.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8 },
+        imageRef.current,
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 0.8 },
       )
+        .fromTo(
+          h1Ref.current,
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 0.8 },
+          '-=0.4', // Start 0.4s before previous animation ends (overlap)
+        )
         .fromTo(
           h2Ref.current,
           { opacity: 0, y: 20 },
@@ -67,6 +75,7 @@ const Hero = () => {
         {/* Left Column - Image with background */}
         <div className="relative w-full md:w-auto flex justify-center md:justify-start items-center">
           <div
+            ref={imageRef}
             className="relative w-1/2 md:w-full max-w-md md:max-w-lg max-h-[600px] aspect-[3/4] rounded-lg overflow-hidden"
             style={{
               backgroundImage: 'url(/images/poster-bg.png)',
